@@ -1,0 +1,20 @@
+<div class="SignIn container">
+  <h1>Iniciar Sesión</h1>
+  <form
+    [formGroup]="formGroup"
+    (ngSubmit)="signIn()"
+    class="SignIn-form">
+    <input
+      type="text"
+      formControlName="username">
+    <input
+      type="password"
+      formControlName="password">
+    <button type="submit">Iniciar Sesión</button>
+
+    <span>
+      <em>¿Aún no tienes una?</em>
+      <a [routerLink]="['/signup']" >Crear cuenta.</a>
+    </span>
+  </form>
+</div>

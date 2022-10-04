@@ -1,0 +1,14 @@
+<div class="Confirm container">
+  <h1>Confirma tu cuenta.</h1>
+  <form
+    [formGroup]="formGroup"
+    (ngSubmit)="confirmSignUp()"
+    class="Confirm-form">
+    <input
+      type="text"
+      placeholder="confirm code"
+      formControlName="confirmCode">
+
+    <button type="submit">Confirmar</button>
+  </form>
+</div>

@@ -1,0 +1,29 @@
+<div class="SignUp container">
+  <h1>Crear Nueva Cuenta</h1>
+  <form
+    [formGroup]="formGroup"
+    (ngSubmit)="signUp()"
+    class="SignUp-form">
+    <input
+      type="text"
+      placeholder="email"
+      formControlName="email">
+    <input
+      type="text"
+      placeholder="username"
+      formControlName="username">
+    <input
+      type="text"
+      placeholder="name"
+      formControlName="name">
+    <input
+      type="password"
+      formControlName="password">
+    <button type="submit">Crear Cuenta</button>
+
+    <span>
+      <em>¿Ya tienes una cuenta?</em>
+      <a [routerLink]="['/signin']" >Inicia Sesión</a>
+    </span>
+  </form>
+</div>
