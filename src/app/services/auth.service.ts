@@ -13,7 +13,6 @@ import { ISignUpForm } from '../modules/signup/pages/sign-up/sign-up.component';
 export class AuthService {
 
   constructor(private router: Router) {
-    // añadir las configuraciones de cognito
     Amplify.configure({
       "aws_project_region": "",
       "aws_cognito_identity_pool_id": "",
@@ -25,7 +24,7 @@ export class AuthService {
 
   signIn(formData: ISignInForm) {
     Auth.signIn(formData.username, formData.password) .then(result => {
-        this.router.navigate(['/']);
+        this.router.navigate([MODULES_ROUTES.home]);
       }).catch(err => console.error);
   }
 
