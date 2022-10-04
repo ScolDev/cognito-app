@@ -25,7 +25,7 @@ export class AuthService {
 
   signIn(formData: ISignInForm) {
     Auth.signIn(formData.username, formData.password) .then(result => {
-        this.router.navigate(['/']);
+        this.router.navigate([MODULES_ROUTES.home]);
       }).catch(err => console.error);
   }
 
